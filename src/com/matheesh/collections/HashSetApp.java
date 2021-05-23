@@ -1,8 +1,6 @@
 package com.matheesh.collections;
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
 
 public class HashSetApp {
 
@@ -21,39 +19,49 @@ public class HashSetApp {
         set.add(2);
         set.add(11);
 
-        for(Integer item : set){
-            System.out.println(item);
-        }
+        HashSet<String> tables = new HashSet();
 
-        LinkedHashSet<Integer> linkSet = new LinkedHashSet();  // It'll preserve the order of insertion
+        tables.add("cart_view_visit_ly");
+        tables.add("category_visit_ly");
+        tables.add("checkout_view_visit_ly");
 
-        linkSet.add(1);
-        linkSet.add(23);
-        linkSet.add(23);
-        linkSet.add(42);
-        linkSet.add(2);
-        linkSet.add(11);
 
-        System.out.println();
-        for(Integer item : linkSet){
-            System.out.println(item);
-        }
 
-        /*
-        hashCode() and equals()
-        HashSet functions on the basis of hashCode
-         */
+        System.out.println(tables.contains("Category_Visit_ly".toLowerCase()));
 
-        HashSet<Animal> animal = new HashSet<>();
-
-        System.out.println();
-        animal.add(new Animal("Tiger"));
-        animal.add(new Animal("Tiger"));
-        animal.add(new Animal("Lion"));
-
-        for(Animal item : animal){
-            System.out.println(item);
-        }
+//        for(Integer item : set){
+//            System.out.println(item);
+//        }
+//
+//        LinkedHashSet<Integer> linkSet = new LinkedHashSet();  // It'll preserve the order of insertion
+//
+//        linkSet.add(1);
+//        linkSet.add(23);
+//        linkSet.add(23);
+//        linkSet.add(42);
+//        linkSet.add(2);
+//        linkSet.add(11);
+//
+//        System.out.println();
+//        for(Integer item : linkSet){
+//            System.out.println(item);
+//        }
+//
+//        /*
+//        hashCode() and equals()
+//        HashSet functions on the basis of hashCode
+//         */
+//
+//        HashSet<Animal> animal = new HashSet<>();
+//
+//        System.out.println();
+//        animal.add(new Animal("Tiger"));
+//        animal.add(new Animal("Tiger"));
+//        animal.add(new Animal("Lion"));
+//
+//        for(Animal item : animal){
+//            System.out.println(item);
+//        }
 
     }
 }
