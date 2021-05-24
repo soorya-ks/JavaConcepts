@@ -1,4 +1,4 @@
-package com.matheesh.concurrency;
+package com.matheesh.concurrency.synchronization;
 
 public class SynchronizedApp {
 
