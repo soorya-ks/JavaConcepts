@@ -1,4 +1,4 @@
-package generics;
+package com.matheesh.generics;
 
 import java.util.HashSet;
 

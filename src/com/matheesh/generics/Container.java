@@ -1,7 +1,4 @@
-package generics;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.matheesh.generics;
 
 public class Container<E, T, H>  {
 
