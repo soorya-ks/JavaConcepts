@@ -1,4 +1,4 @@
-package com.matheesh.ExceptionHandling;
+package com.matheesh.exceptionhandling;
 
 public class SupportAppException {
 

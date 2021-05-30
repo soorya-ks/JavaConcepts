@@ -1,4 +1,4 @@
-package com.matheesh.FileHandling;
+package com.matheesh.filehandling;
 
 import java.io.File;
 import java.io.FileNotFoundException;
