@@ -2,6 +2,8 @@ package com.matheesh.lambda.dynamic;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class AppGenericLambda {
 
@@ -38,13 +40,37 @@ public class AppGenericLambda {
         System.out.println("Printing cars that are blue in color..");
         printCars(cars, (color) -> color.getColor().equalsIgnoreCase("red")); // same method using lambda
 
+        System.out.println("Printing the Honda cars and their details");
+        print(cars, (name) -> name.getName().equalsIgnoreCase("honda") );
+
+
+        Function<Car, String> myfunction = (c) -> {  // Inbuilt functional interface
+            return c.getName() + " " + c.getPrice();
+        };
+
+        String myCar = myfunction.apply(cars.get(0));
+
+        System.out.println("Printing car using Function interface - " + myCar);
+
+
+
     }
 
-
+   /*
+   Also checkout Predicate<T> interface in java. Java provides in-built functional interfaces.
+    */
 
     public static void printCars(List<Car> car, CarCondition condition) {
 
         for (Car c : car)
+            if (condition.test(c)) {
+                System.out.println(c);
+            }
+    }
+
+    public static void print(List<Car> list, Predicate<Car> condition) {
+
+        for (Car c : list)
             if (condition.test(c)) {
                 System.out.println(c);
             }
